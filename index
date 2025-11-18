@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <meta charset="utf-8">
-    <title>滑鼠訓練之食神大賽 - 線上版</title>
-    
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script> 
-    
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f0f0;
-        }
-        #flash-container {
-            border: 2px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>滑鼠訓練之食神大賽 - 線上玩（完全離線版）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 完全使用自己倉庫的 ruffle.js -->
+  <script src="ruffle.js"></script>
+  <style>
+    body {margin:0;background:#000;display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;}
+    h1 {color:#fff;font-family:Microsoft JhengHei, sans-serif;margin-bottom:10px;}
+    canvas {image-rendering:pixelated;border:4px solid #fff;box-shadow:0 0 30px #333;}
+  </style>
 </head>
 <body>
-    <h1>滑鼠訓練之食神大賽</h1>
-    <p>Loading... (Ruffle 正在嘗試載入遊戲)</p>
-
-    <div id="flash-container">
-        <object data="Unicode_tefrbca1-rip.swf" width="800" height="600" type="application/x-shockwave-flash">
-            <param name="movie" value="Unicode_tefrbca1-rip.swf">
-        </object>
-    </div>
-    
-    <p>請注意：如果遊戲無法啟動，請嘗試將上面的 `data` 和 `param name="movie"` 替換為其他編號的 SWF 檔案名稱。</p>
-
+  <h1>滑鼠訓練之食神大賽</h1>
+  <embed src="Unicode_tefrbca1-rip.swf" width="800" height="600" quality="high" bgcolor="#000000">
+  
+  <script>
+    // 可選：一些小優化
+    window.RufflePlayer.config = {
+      autoplay: "on",
+      unmuteOverlay: "hidden",
+      backgroundColor: "#000000",
+      warnOnUnsupportedContent: false
+    };
+  </script>
 </body>
 </html>
