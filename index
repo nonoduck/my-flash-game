@@ -1,28 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>滑鼠訓練之食神大賽 - 線上玩</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  <style>
-    body {margin:0;background:#111;display:flex;justify-content:center;align-items:center;height:100vh;}
-    h1 {position:absolute;top:10px;color:#fff;font-family:Microsoft JhengHei, sans-serif;}
-    canvas {image-rendering:pixelated;box-shadow:0 0 20px #000;}
-  </style>
+    <meta charset="utf-8">
+    <title>滑鼠訓練之食神大賽 - 線上版</title>
+    
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script> 
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        #flash-container {
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h1>滑鼠訓練之食神大賽</h1>
-  
-  <!-- 只要放「載入器」那個 swf 就夠了，Ruffle 會自動去抓另外三個 -->
-  <embed src="Unicode_tefrbca1-rip.swf" width="800" height="600" quality="high" bgcolor="#000000">
-  
-  <script>
-    window.RufflePlayer.config = {
-      autoplay: "on",
-      unmuteOverlay: "hidden",
-      backgroundColor: "#000000"
-    };
-  </script>
+    <h1>滑鼠訓練之食神大賽</h1>
+    <p>Loading... (Ruffle 正在嘗試載入遊戲)</p>
+
+    <div id="flash-container">
+        <object data="Unicode_tefrbca1-rip.swf" width="800" height="600" type="application/x-shockwave-flash">
+            <param name="movie" value="Unicode_tefrbca1-rip.swf">
+        </object>
+    </div>
+    
+    <p>請注意：如果遊戲無法啟動，請嘗試將上面的 `data` 和 `param name="movie"` 替換為其他編號的 SWF 檔案名稱。</p>
+
 </body>
 </html>
