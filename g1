@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <title>滑鼠訓練之食神大賽 - 線上玩</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Ruffle 官方 CDN (2025 最新版) -->
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <style>
+    body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: Arial, sans-serif; }
+    #game-container { text-align: center; }
+    canvas { image-rendering: pixelated; border: 2px solid #fff; } /* 讓畫面更清晰 */
+    h1 { color: #fff; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <h1>滑鼠訓練之食神大賽</h1>
+    <!-- 這裡嵌入你的 SWF，調整 width/height 適合遊戲（預設 800x600） -->
+    <embed src="game.swf" width="800" height="600" quality="high" bgcolor="#000000" type="application/x-shockwave-flash">
+  </div>
+  <script>
+    // Ruffle 自動處理，但加點優化
+    window.RufflePlayer.config = {
+      "autoplay": "on",
+      "unmuteOverlay": "hidden",
+      "backgroundColor": "#000000",
+      "upgrade": true  // 提示用 Ruffle
+    };
+  </script>
+</body>
+</html>
